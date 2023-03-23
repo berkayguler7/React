@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import Header from './components/Header';
 import './App.css';
+import User from './components/User';
+
+const name = 'John Doe';
+const isLoggedIn = true;
+const friends = [
+  {id: 1,name: 'John', age: 22},
+  {id: 2,name: 'Jane', age: 23},
+  {id: 3,name: 'Jack'},
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <User 
+        name={name} 
+        isLoggedIn={isLoggedIn} age={26}
+        friends={friends}
+        />
+      <p className='xyz'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+
+      <label htmlFor='myinput'>
+        Name
+        <input type='text' id='myinput' />
+      </label>
     </div>
   );
 }
