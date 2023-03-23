@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btnIncrement").click(function() {
+               $("#count").text(parseInt($("#count").text()) + 1);
+            });
+            $("#btnDecrement").click(function() {
+               $("#count").text(parseInt($("#count").text()) - 1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum</p>
+    <h1 id="count">0</h1>
+    <p>Lorem ipsum</p>
+
+    <button id="btnDecrement">Decrement</button>
+    <button id="btnIncrement">Increment</button>
+    <div id="div1"></div>
+</body>
+</html>
