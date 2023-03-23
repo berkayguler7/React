@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function User({name, isLoggedIn, age, friends}) {
+    if(!isLoggedIn) return <div>Not logged in</div>;
   return (
     <div>
-        {isLoggedIn ? `User: ${name} (${age})` : 'Not logged in'}
+        {`User: ${name} (${age})`}
 
         {friends && friends.map((friend) => 
         <div key={friend.id}>{friend.name} {friend.age &&`(${friend.age})`}</div>)}
@@ -22,4 +23,9 @@ User.propTypes = {
         name: PropTypes.string.isRequired,
         age: PropTypes.number,
     })),
+}
+
+User.defaultProps = {
+    name: 'Guest',
+    isLoggedIn: false,
 }
