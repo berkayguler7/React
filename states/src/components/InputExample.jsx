@@ -11,9 +11,7 @@ function InputExample() {
     <div>
         Please enter an input: 
         <br />
-        <input type="text" 
-            value={input} 
-            onChange={onChangeName} />
+        <input type="text" value={input}  onChange={onChangeName} />
         <br />
         {input}
     </div>
