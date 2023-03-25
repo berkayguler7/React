@@ -1,0 +1,38 @@
+#container {
+	width: 400px;
+	background-color: aliceblue;
+	margin: 0 auto;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list {
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.list > li {
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+    justify-content: space-between;
+    display: flex;
+}
